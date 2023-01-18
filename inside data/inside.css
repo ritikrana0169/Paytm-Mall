@@ -100,154 +100,25 @@ height: 80%;
 .navMenu>div:nth-child(5) img{
     width: 25%;
 }
-/*main css*/
-.partUpper1,.partUpper2,.partUpper3{
-    display: flex;
-}
-.part1Btn1,.part2Btn1,.part3Btn1{
-    position: absolute;
-    width: 5vw;
-    height: 12vh;
-    border: 0px;
-    border-radius: 5px;
-    left: 96%;
-    background-color: rgba(214, 208, 208, 0.63);
-}
-.part1Btn2,.part2Btn2,.part3Btn2{
-    position: absolute;
-    width: 5vw;
-    height: 12vh;
-    border: 0px;
-    border-radius: 10px;
-    left: -1%;
-    background-color: rgba(214, 208, 208, 0.63);
-}
-.part1Btn2:hover,.part2Btn2:hover,.part3Btn2:hover{
-    background-color: rgba(148, 139, 139, 0.63);
-}
-.part1Btn1:hover,.part2Btn1:hover,.part3Btn1:hover{
-    background-color: rgba(148, 139, 139, 0.63);
-}
-.span1{
-    width: 10px;
-    height: 10px;
-    border: 1px solid rgb(90, 86, 86);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    transform: rotate(-45deg);
-}
-.span2{
-    width: 10px;
-    height: 10px;
-    border: 1px solid rgb(77, 74, 74);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    transform: rotate(135deg);
-}
-.part1{
-    margin-top: 7vh;
-    display: flex;
-    /* color: red; */
-    text-align: center;
-    justify-content: space-between;
-    /* width: 100%; */
-    overflow-x:scroll;
-margin-bottom: 2vh;
-}
-.part1> div{
-    width: 12%;
-    /* border: 1px solid red; */
-    cursor: pointer;
-    margin-left: 47px;
-}
 
-.part1>div a{
-    margin: auto;
-    font-size: 13px;
-    color: black;
-    text-decoration: none;
-    
-}
-.part2>div a{
-    margin: auto;
-    font-size: 13px;
-    color: black;
-    text-decoration: none;
-}
-.part3>div a{
-    margin: auto;
-    font-size: 13px;
-    color: black;
-    text-decoration: none;
-}
-.part1>div> img{
-    /* width: max-content; */
-    width: 80px;
-    border-radius: 50%;
-    border: 1px solid rgb(172, 171, 171);
-    margin-bottom: 10px;
-}
-.part2{
-    margin-top: 7vh;
-    display: flex;
-    margin-bottom: 2vh;
-    text-align: center;
-    justify-content: space-between;
-    overflow-x:scroll;
-    
-}
-.part2> div{
-    width: 12%;
-    /* border: 1px solid red; */
-    cursor: pointer;
-    margin-left: 47px;
-    
-}
-.part2>div> img{
-    /* width: max-content; */
-    width: 80px;
-    border-radius: 50%;
-    border: 1px solid rgb(172, 171, 171);
-    margin-bottom: 10px;
-}
-.part3{
-    margin-top: 7vh;
-    display: flex;
-    margin-bottom: 2vh;
-    text-align: center;
-    justify-content: space-between;
-    overflow-x:scroll;
 
-}
-.part3> div{
-    width: 12%;
-    /* border: 1px solid red; */
-    cursor: pointer;
-    margin-left: 47px;
-    
-}
-.part1> div a:hover,.part2> div a:hover,.part3> div a:hover{
-color: red;
-}
-.part3>div> img{
-    /* width: max-content; */
-    width: 80px;
-    border-radius: 50%;
-    border: 1px solid rgb(172, 171, 171);
-    margin-bottom: 10px;
-}
-::-webkit-scrollbar{
-    display: none;
-}
-#mainCon{
-    width: 95%;
-    margin: 2vh auto 2vh auto;
-}
-#mainCon>p{
-    padding-top:20px ;
-    padding-bottom: 5px;
-}
-/*                 footer part starts here */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #footer{
     width: 100%;
 }

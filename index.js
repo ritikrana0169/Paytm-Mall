@@ -1,4 +1,7 @@
 let main=document.getElementById("main");
+let main2=document.getElementById("main2")
+let main3=document.getElementById("main3")
+let maincon=document.getElementById("mainCon")
 let partUp1=document.querySelector(".partUpper1");
 let partUp2=document.querySelector(".partUpper2");
 let partUp3=document.querySelector(".partUpper3");
@@ -18,11 +21,29 @@ function display(data){
    
     data.forEach((element,index) => {
         let div=document.createElement("div");
+        // div.addEventListener("click",()=>{
+        //     main.innerHTML=""
+        //     main2.innerHTML="";
+        //     main3.innerHTML="";
+        //     maincon.innerHTML=""
+            
+        // })
         div.setAttribute=("class","part1")
         let image=document.createElement("img");
         image.src=element.image;
-        let title=document.createElement("p");
+        let title=document.createElement("a");
+        title.href="/inside data/inside.html";
         title.innerText=element.title;
+        let name="";
+        title.addEventListener("click",()=>{
+            data=data.filter((ele,ind)=>{
+              if(index==ind){
+                name=element.title;
+              }
+            })
+            localStorage.setItem("insideName",JSON.stringify(name));
+        })
+        
         div.append(image,title)
         part1.append(div)
         partUp1.append(part1)
@@ -48,11 +69,27 @@ function display2(data){
     
     data.forEach((element,index) => {
         let div=document.createElement("div");
+        // div.addEventListener("click",()=>{
+        //     main.innerHTML=""
+        //     main2.innerHTML="";
+        //     main3.innerHTML="";
+        //     maincon.innerHTML=""
+        // })
         div.setAttribute=("class","part1")
         let image=document.createElement("img");
         image.src=element.image;
-        let title=document.createElement("p");
+        let title=document.createElement("a");
+        title.href="/inside data/inside.html";
         title.innerText=element.title;
+        let name="";
+        title.addEventListener("click",()=>{
+            data=data.filter((ele,ind)=>{
+              if(index==ind){
+                name=element.title;
+              }
+            })
+            localStorage.setItem("insideName",JSON.stringify(name));
+        })
         div.append(image,title)
         part2.append(div)
         partUp2.append(part2)
@@ -74,8 +111,18 @@ function display3(data){
         div.setAttribute=("class","part1")
         let image=document.createElement("img");
         image.src=data[i].image;
-        let title=document.createElement("p");
+        let title=document.createElement("a");
+        title.href="/inside data/inside.html";
         title.innerText=data[i].title;
+        let name="";
+        title.addEventListener("click",()=>{
+            data=data.filter((ele,ind)=>{
+              if(i==ind){
+                name=data[i].title;
+              }
+            })
+            localStorage.setItem("insideName",JSON.stringify(name));
+        })
         div.append(image,title)
         part3.append(div)
         partUp3.append(part3)
