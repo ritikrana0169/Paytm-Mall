@@ -93,7 +93,6 @@ height: 80%;
 .navMenu>div:nth-child(5){
     display: flex;
     height: 6vh;
-    width: max-content;
     cursor: pointer;
     font-size: 15px;
 }
@@ -330,9 +329,6 @@ gap: 30px;
 .btn1{
     background-color: rebeccapurple;
 }
-.showNone{
-    display: none;
-}
 #main2{
     text-align: center;
     margin-top: 5vh;
@@ -391,4 +387,23 @@ overflow: hidden;
     margin: auto;
     border: 3px solid #ef4e28;
     border-radius: 20px;
+}
+
+
+/* loginPage here */
+#signUpPage{
+    width: 100%;
+    height: 400vh;
+    background-color: rgba(19, 18, 18, 0.445);
+    display:none;
+    position: absolute;
+    z-index: 100;
+}
+#signIn{
+    width: 100%;
+    height: 400vh;
+    background-color: rgba(19, 18, 18, 0.445);
+    display:none;
+    position: absolute;
+    z-index: 100;
 }

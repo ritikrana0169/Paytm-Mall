@@ -8,26 +8,31 @@ let partUp3=document.querySelector(".partUpper3");
 let part1=document.querySelector(".part1");
 let part2=document.querySelector(".part2");
 let part3=document.querySelector(".part3")
+let login=document.getElementById("login");
+let signUpPage=document.getElementById("signUpPage");
+let closeBtn=document.querySelector(".closeBtn");
+let goto=document.getElementById("goToSignIn");
 const api="https://63c6452ddcdc478e15be0fe2.mockapi.io/e-commerce";
+let cartData=JSON.parse(localStorage.getItem("cartData"))||[];
 fetching(api);
 async function fetching(data){
     let request=await fetch(data);
     let inData=await request.json();
-    return display(inData),display3(inData);
+    return display(inData,cartData),display3(inData,cartData);
 }
-
-function display(data){
+login.addEventListener("click",()=>{
+    signUpPage.style.display="block"
+})
+goto.addEventListener("click",()=>{
+    signUpPage.style.display="none"
+    document.getElementById("signIn").style.display="block"
+})
+function display(data,data2){
     // main.innerHTML="";
-   
+   document.getElementById("itemInBag").innerText=data2.length;
     data.forEach((element,index) => {
         let div=document.createElement("div");
-        // div.addEventListener("click",()=>{
-        //     main.innerHTML=""
-        //     main2.innerHTML="";
-        //     main3.innerHTML="";
-        //     maincon.innerHTML=""
-            
-        // })
+        
         div.setAttribute=("class","part1")
         let image=document.createElement("img");
         image.src=element.image;
@@ -69,12 +74,7 @@ function display2(data){
     
     data.forEach((element,index) => {
         let div=document.createElement("div");
-        // div.addEventListener("click",()=>{
-        //     main.innerHTML=""
-        //     main2.innerHTML="";
-        //     main3.innerHTML="";
-        //     maincon.innerHTML=""
-        // })
+        
         div.setAttribute=("class","part1")
         let image=document.createElement("img");
         image.src=element.image;
@@ -103,7 +103,7 @@ document.querySelector(".part2Btn2").addEventListener("click",()=>{
     part2.scrollLeft-=1300;
 })
 function display3(data){
-    // main.innerHTML="";
+    
    
    for(let i=data.length-1;i>=0;i--){
     
@@ -134,4 +134,11 @@ document.querySelector(".part3Btn1").addEventListener("click",()=>{
 })
 document.querySelector(".part3Btn2").addEventListener("click",()=>{
     part3.scrollLeft-=1300;
+})
+
+closeBtn.addEventListener("click",()=>{
+    signUpPage.style.display="none";
+})
+document.querySelector(".closeBtn2") .addEventListener("click",()=>{
+    document.getElementById("signIn").style.display="none";
 })

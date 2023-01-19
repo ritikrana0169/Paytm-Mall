@@ -9,9 +9,10 @@
 </head>
 <body>
     <header id="header">
-        <div>
-<img src="./navBar Images/logo.png" alt="error" srcset="">
-        </div>
+         <div id="logo"> 
+             <img src="./navBar Images/logo.png" alt="error" srcset="">
+                    </div>
+        
         <div class="navMenu">
             <div>
                 <img src="./navBar Images/icons8-menu-rounded-50.png" alt="burgerMenu">
@@ -37,15 +38,56 @@
             </div>
             <div>
                 <img src="./navBar Images/icons8-shopping-bag-50.png" alt="bagIcon">
-                <p>No item in the bag</p>
+                <p><span id="itemInBag">No</span> item in the bag</p>
             </div>
             <div>
                 <img src="./navBar Images/icons8-nerd-50.png" alt="bagIcon">
-                <p>Login/Sign up</p>
+                <p><span id="login">Login/Sign up</span></p>
             </div>
         </div>
-    </header>
+    </header> 
 
+
+    <div style="width: 100%; height: 8vh; background-color: #f5f7f7; display: flex; align-items: center;"><p style="margin-left:2vw;">Home / Deal Store <span id="folderLoc"></span></p></div>
+        <div class="fatherMain">
+            <div class="mainLeft">
+
+             <p><span></span>Deals For You</p>
+             <p><span></span>Fashion</p>
+               <h5>Apparels</h5>
+               <hr>
+               <h3>Price</h3>
+               <div style="font-size: 14px; font-weight: 800; opacity: 0.8;color: red; letter-spacing: 2px; width: 75%; box-shadow: 1px 1px 10px black;text-align: center;height: 5vh;display: flex;
+               align-items: center; justify-content: center; border-radius: 20px;">value set</div>
+
+               
+               <div><form action="submit"><input type="number" placeholder="Min" id="minValue">
+            <input type="number" placeholder="Max" id="maxValue">
+        <input type="submit" value="Show"></form></div>
+        
+            <hr>
+            <h4>Brand</h4>
+            <p id="setBrand">BrandName</p>
+            </div>
+
+            <div id="mainRight">
+             <div class="uppMain">
+                <div style="display: flex; align-items: center; height: 2vh;">
+                    <h2 id="nameOfProduc">ProductName</h2>
+                    <p>- <span id="numOfProduct"></span>Products</p>
+                </div>
+                <select name="" id="select">
+                    <option value="">Sort By</option>
+                    <option value="high">High To Low</option>
+                    <option value="low">Low To High</option>
+                </select>
+             </div>
+             <div id="main">
+
+             </div>
+            </div> 
+
+        </div>
 
 
 
@@ -83,6 +125,9 @@
                 <img src="/navBar Images/footerr.png" alt="">
             </div>
         </div>
+        
+        
+        
         <div class="footerLast">
             <h4>From Electronics, Fashion to Cars: Buy Everything Online from the Convenience of Your Home from Paytm Mall</h4>
             <div>
