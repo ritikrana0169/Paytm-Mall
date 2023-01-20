@@ -12,6 +12,41 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div id="signUpPage">
+        <button style="position: sticky; top: 22%;left: 90%; width:3vw; height: 7vh;
+        margin-top: 20vh; border-radius: 20px;color: white; border: 1px solid red; background-color: transparent;
+        " class="closeBtn"> X </button>
+        <div style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
+            <h2>Sign Up</h2>
+            <form id="formSingUp" action="submit">
+            <label for="email">Name</label>
+            <input type="text" name="" id="signUpName">
+            <label for="email">Email</label>
+            <input type="email" name="" id="signUpMail">
+            <label for="email">Password</label>
+            <input type="password" name="" id="signUpPass">
+            <input type="submit" value="Submit">
+        </form>
+        <h4>already have account</h4>
+        <h5 style="color: blue;" id="goToSignIn">Sign In Here</h5>
+        </div>
+    </div>
+    <div id="signIn">
+        <button style="position: sticky; top: 22%;left: 90%; width:3vw; height: 7vh;
+        margin-top: 20vh; border-radius: 20px;color: white; border: 1px solid red; background-color: transparent;
+        " class="closeBtn2"> X </button>
+        <div style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
+            <h2>Log In</h2>
+            <form id="formSingIn action="submit">
+            <label for="email">Name</label>
+            <input type="text" name="" id="signUpName">
+            <label for="email">Email</label>
+            <input type="email" name="" id="signUpMail">
+            <label for="email">Password</label>
+            <input type="password" name="" id="signUpPass">
+            <input type="submit" value="Submit">
+        </form></div>
+    </div>
     <header id="header">
         <div>
 <img src="./navBar Images/logo.png" alt="error" srcset="">
@@ -41,19 +76,21 @@
             </div>
             <div>
                 <img src="./navBar Images/icons8-shopping-bag-50.png" alt="bagIcon">
-                <p>No item in the bag</p>
+                <p><span id="itemInBag">No</span> item in the bag</p>
             </div>
             <div>
                 <img src="./navBar Images/icons8-nerd-50.png" alt="bagIcon">
-                <p>Login/Sign up</p>
+                <p id="login">Login/Sign up</p>
             </div>
         </div>
     </header>
     <main id="main">
+        
         <div>
             <div class="partUpper1">
                 <button class="part1Btn1"><span class="span1"></span></button><div class="part1">
             </div>
+            <div id="loginPage"></div>
             <button class="part1Btn2"><span class="span2"></span></div>
 
             <div class="partUpper2"><button class="part2Btn1"><span class="span1"></span></button><div class="part2">
@@ -65,6 +102,7 @@
             <button class="part3Btn2"><span class="span2"></span></div>
 
 </div>
+
     </main>
     <div id="main2">
         <h1>Grocery & Home Furnishing</h1>
@@ -189,4 +227,5 @@
     </footer>
 </body>
 <script src="index.js"></script>
+<script src="./signUp.js"></script>
 </html>

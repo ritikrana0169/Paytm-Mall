@@ -9,19 +9,27 @@ body{
     overflow-x: hidden;
 }
 #header{
-    width: 95%;
+    width: 100%;
     margin: 2vh auto auto auto;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     position: sticky;
-    top: -11%;
-    text-align: center;
+    top: -4%;
+    /* text-align: center; */
     background-color: white;
-    height: 19vh;
+    height: 13vh;
+    z-index: 10;
 }
 #header>div:nth-child(1){
     width: 100%;
+    background-color: #f5f7f7;
+    height: 4vh;
 }
 #header>div:nth-child(1) img{
-width: 20%;
+width: 5%;
+position: relative;
+left: -2vw;
+top: 4vh;
 }
 .navMenu{
    
@@ -29,30 +37,33 @@ width: 20%;
     margin: auto;
     width: 100%;
     justify-content: space-evenly;
-    /* border: 1px solid red; */
-    /* height: 9vh; */
+    background-color: #fff;
+    z-index: 1;
 }
+
 .navMenu>div:nth-child(1){
-    width: 16%;
+    width: 14%;
+    margin-left: 3vw;
     border: 1px solid rgb(167, 158, 158);
         display: flex;
     justify-content: space-around;
     border-radius: 2px;
-    height: 6vh;
+    height: 5vh;
 }
 .navMenu>div:nth-child(1) img{
-width: 13%;
+width: 12%;
 height: 80%;
 }
 .navMenu>div:nth-child(1) select{
     border: transparent;
+    width: 80%;
     font-weight: 600;
     border-radius: 50px;
     outline-width: 0;
 }
 .navMenu>div:nth-child(2){
     width: 48%;
-    height: 6vh;
+    height: 5vh;
     border: 1px solid rgb(167, 158, 158);
     display: flex;
     justify-content: space-between;
@@ -72,45 +83,168 @@ height: 80%;
 }
 .navMenu>div:nth-child(3){
     display: flex;
-    height: 6vh;
+    height: 5vh;
     width: max-content;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
 }
 .navMenu>div:nth-child(3) img{
-    width: 30%;
+    width: 25%;
 }
 .navMenu>div:nth-child(4){
     display: flex;
     height: 6vh;
     width: max-content;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
 }
 .navMenu>div:nth-child(4) img{
-    width: 22%;
+    width: 17%;
 }
 .navMenu>div:nth-child(5){
     display: flex;
     height: 6vh;
     width: max-content;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
 }
 .navMenu>div:nth-child(5) img{
-    width: 25%;
+    width: 22%;
+
 }
 
 
 
+/* main part css here */
+.fatherMain{
+    display: flex;
+     width: 100%;
+     /* border: 1px solid red; */
+      background-color: #f5f7f7;
+     justify-content: space-between;
+     padding-top: 2vh;
+     align-items: flex-start;
+}
 
 
+ .mainLeft{
+    /* border: 1px solid greenyellow; */
+    width: 23%;
+    background-color: white;
+    margin-left: 2vw;
+    height: 60vh;
+    padding: 25px 0px 0px 20px;
+    position: sticky;
+    top: 10%;
+    height: 70vh;
+} 
+.mainLeft>:nth-child(1){
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+.mainLeft>:nth-child(1) span{
+    display: inline-block;
+    border: 1px solid black;
+    opacity: 0.8;
+    border-width: 2px 2px 0px 0px;
+    padding: 3px;
+    transform: rotate(-135deg);
+}
+.mainLeft>:nth-child(2){
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5vh;
+}
+.mainLeft>:nth-child(2) span{
+    display: inline-block;
+    border: 1px solid black;
+    opacity: 0.8;
+    border-width: 2px 2px 0px 0px;
+    padding: 3px;
+    transform: rotate(-135deg);
+}
+.mainLeft>:nth-child(3){
+    padding-left:1vw;
+    font-size: 15px;
+margin-bottom: 4vh;
+opacity: 0.9;
+}
+.mainLeft>:nth-child(4){
+    width: 90%;
+    opacity: 0.8;
+    margin: auto 5vw auto auto;
+}
+.mainLeft>:nth-child(5){
+    margin-top: 2.5vh;
+    font-size: 15px;
+    opacity: 0.9;
+}
+.mainLeft>:nth-child(6){
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+}
+.mainLeft>:nth-child(7){
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+}
+.mainLeft>:nth-child(7) input{
+width: 5vw;
+outline-style: none;
 
+}
+.mainLeft>:nth-child(8){
+    width: 90%;
+    opacity: 0.8;
+    margin: auto 5vw auto auto;
+}
+.mainLeft>:nth-child(9){
+    margin-top: 2vh;
+    font-size: 15px;
+    opacity: 0.9;
+}
+.mainLeft>:nth-child(10){
+    margin-top: 2.5vh;
+    font-size: 15px;
+    font-weight: 800;
+}
 
-
-
-
-
+#mainRight{
+    width: 73%;
+    background-color: white;
+}
+.uppMain{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2vh auto auto auto;
+    height: 10vh;
+    border: 1px solid rgb(143, 132, 132);
+    border-width: 0px 0px 1px 0;
+} 
+#main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: flex-start;
+    gap: 30px;
+    min-height: 100vh;
+}
+#main>div{
+    width: 100%;
+margin-top: 2vh;
+margin-left: 3vw;
+}
+#main>div img{
+    width: 70%;
+}
 
 
 
