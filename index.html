@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    
     <div id="signUpPage">
         <button style="position: sticky; top: 22%;left: 90%; width:3vw; height: 7vh;
         margin-top: 20vh; border-radius: 20px;color: white; border: 1px solid red; background-color: transparent;
         " class="closeBtn"> X </button>
-        <div style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
+        <div class="signUpDesign" style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
             <h2>Sign Up</h2>
             <form id="formSingUp" action="submit">
             <label for="email">Name</label>
@@ -33,17 +34,15 @@
     </div>
     <div id="signIn">
         <button style="position: sticky; top: 22%;left: 90%; width:3vw; height: 7vh;
-        margin-top: 20vh; border-radius: 20px;color: white; border: 1px solid red; background-color: transparent;
+        margin-top: 20vh; border-radius: 20px;color: white; border: 1px solid red; background-color: black;
         " class="closeBtn2"> X </button>
-        <div style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
+        <div class="signUpDesign" style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
             <h2>Log In</h2>
-            <form id="formSingIn action="submit">
-            <label for="email">Name</label>
-            <input type="text" name="" id="signUpName">
+            <form id="formSingIn" action="submit">
             <label for="email">Email</label>
-            <input type="email" name="" id="signUpMail">
-            <label for="email">Password</label>
-            <input type="password" name="" id="signUpPass">
+            <input type="email" name="" id="signInMail">
+            <label for="password">Password</label>
+            <input type="password" name="" id="signInPass">
             <input type="submit" value="Submit">
         </form></div>
     </div>
@@ -67,20 +66,21 @@
             </div>
 
             <div>
-                <input type="search" placeholder="Search for a Product, Brand or Category">
-                <img src="./navBar Images/icons8-search-50.png" alt="search icon" srcset="">
+                <input id="searchBar" type="search" placeholder="Search for a Product, Brand or Category">
+                <img id="searchBtn" src="./navBar Images/icons8-search-50.png" alt="search icon" srcset="">
             </div>
             <div>
                 <img src="./navBar Images/icons8-list-64.png" alt="bagIcon">
                 <p>My Orders</p>
             </div>
-            <div>
+            <div onclick="gotocart()">
                 <img src="./navBar Images/icons8-shopping-bag-50.png" alt="bagIcon">
                 <p><span id="itemInBag">No</span> item in the bag</p>
             </div>
             <div>
-                <img src="./navBar Images/icons8-nerd-50.png" alt="bagIcon">
+                <img id="loginImg" src="./inside data/navBar Images/icons8-nerd-50.png" alt="bagIcon">
                 <p id="login">Login/Sign up</p>
+                <div id="logOutBtn" style="width: 5vw; height: 3vh; border-radius: 20px; display: flex;align-items: center; color: white; background-color: black; position: absolute; top: 22vh; display: none;" onclick="clearAll()">Log Out</div>
             </div>
         </div>
     </header>
@@ -228,4 +228,5 @@
 </body>
 <script src="index.js"></script>
 <script src="./signUp.js"></script>
+<script src="./filter.js"></script>
 </html>

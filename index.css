@@ -91,6 +91,7 @@ height: 80%;
     width: 22%;
 }
 .navMenu>div:nth-child(5){
+    width: 10%;
     display: flex;
     height: 6vh;
     cursor: pointer;
@@ -101,7 +102,9 @@ height: 80%;
 }
 /*main css*/
 .partUpper1,.partUpper2,.partUpper3{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   
 }
 .part1Btn1,.part2Btn1,.part3Btn1{
     position: absolute;
@@ -161,20 +164,20 @@ margin-bottom: 2vh;
 }
 
 .part1>div a{
-    margin: auto;
+    /* margin:px auto auto auto; */
     font-size: 13px;
     color: black;
     text-decoration: none;
     
 }
 .part2>div a{
-    margin: auto;
+    /* margin: auto; */
     font-size: 13px;
     color: black;
     text-decoration: none;
 }
 .part3>div a{
-    margin: auto;
+    /* margin: auto; */
     font-size: 13px;
     color: black;
     text-decoration: none;
@@ -402,8 +405,63 @@ overflow: hidden;
 #signIn{
     width: 100%;
     height: 400vh;
-    background-color: rgba(19, 18, 18, 0.445);
+    background-color: rgba(246, 255, 0, 0.445);
     display:none;
     position: absolute;
     z-index: 100;
+}
+.signUpDesign{
+    padding: 50px;
+    box-shadow: -10px -10px  100px rgb(24, 3, 255);
+    border: 4px solid rgb(0, 255, 251);
+}
+.signUpDesign h2{
+    text-align: center;
+    color: rgb(60, 60, 215);
+    margin-bottom: 5vh;
+    letter-spacing: 1.5px;
+}
+.signUpDesign form input{
+    display: block;
+    width: 40%;
+    margin: auto auto 3vh auto ;
+    border: 0px;
+    border: 1px solid blue;
+    border-width: 0 0 2px 0;
+    outline: none;
+}
+.signUpDesign form label{
+    display: block;
+    width: 40%;
+    margin: auto ;
+}
+.signUpDesign form input:nth-last-child(1){
+border-width: 2px 2px 2px 2px;
+border-radius: 10px;
+}
+.signUpDesign h4,h5{
+    text-align: center;
+}
+.myStyle{
+    margin-top: 5vh;
+    margin-left: 3vw;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    /* width: 90%; */
+}
+.myStyle>div{
+    /* text-align: center; */
+    width: 80%;
+    box-shadow: 1px 1px 10px rgb(1, 1, 1);
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+}
+.myStyle>div img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.myStyle>div h3,h4{
+    margin-left: 1vw;
 }
