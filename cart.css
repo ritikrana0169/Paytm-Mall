@@ -113,138 +113,26 @@ height: 80%;
 
 }
 
-
-
-/* main part css here */
-.fatherMain{
-    display: flex;
-     width: 100%;
-     /* border: 1px solid red; */
-      background-color: #f5f7f7;
-     justify-content: space-between;
-     padding-top: 2vh;
-     align-items: flex-start;
-}
-
-
- .mainLeft{
-    /* border: 1px solid greenyellow; */
-    width: 23%;
-    background-color: white;
-    margin-left: 2vw;
-    height: 60vh;
-    padding: 25px 0px 0px 20px;
-    position: sticky;
-    top: 10%;
-    height: 70vh;
-} 
-.mainLeft>:nth-child(1){
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.8;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1vh;
-}
-.mainLeft>:nth-child(1) span{
-    display: inline-block;
-    border: 1px solid black;
-    opacity: 0.8;
-    border-width: 2px 2px 0px 0px;
-    padding: 3px;
-    transform: rotate(-135deg);
-}
-.mainLeft>:nth-child(2){
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.8;
-    display: flex;
-    align-items: center;
-    margin-bottom: 2.5vh;
-}
-.mainLeft>:nth-child(2) span{
-    display: inline-block;
-    border: 1px solid black;
-    opacity: 0.8;
-    border-width: 2px 2px 0px 0px;
-    padding: 3px;
-    transform: rotate(-135deg);
-}
-.mainLeft>:nth-child(3){
-    padding-left:1vw;
-    font-size: 15px;
-margin-bottom: 4vh;
-opacity: 0.9;
-}
-.mainLeft>:nth-child(4){
-    width: 90%;
-    opacity: 0.8;
-    margin: auto 5vw auto auto;
-}
-.mainLeft>:nth-child(5){
-    margin-top: 2.5vh;
-    font-size: 15px;
-    opacity: 0.9;
-}
-.mainLeft>:nth-child(6){
-    margin-top: 4vh;
-    margin-bottom: 4vh;
-}
-.mainLeft>:nth-child(7){
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    margin-bottom: 3vh;
-}
-.mainLeft>:nth-child(7) input{
-width: 5vw;
-outline-style: none;
-
-}
-.mainLeft>:nth-child(8){
-    width: 90%;
-    opacity: 0.8;
-    margin: auto 5vw auto auto;
-}
-.mainLeft>:nth-child(9){
-    margin-top: 2vh;
-    font-size: 15px;
-    opacity: 0.9;
-}
-.mainLeft>:nth-child(10){
-    margin-top: 2.5vh;
-    font-size: 15px;
-    font-weight: 800;
-}
-
-#mainRight{
-    width: 73%;
-    background-color: white;
-}
-.uppMain{
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 2vh auto auto auto;
-    height: 10vh;
-    border: 1px solid rgb(143, 132, 132);
-    border-width: 0px 0px 1px 0;
-} 
-#main{
+#mainCart{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    align-items: flex-start;
+    grid-template-columns: repeat(4,1fr);
     gap: 30px;
-    min-height: 100vh;
+    width: 80%;
+    margin: 3vh auto auto auto;
+    min-height: 80vh;
+    align-items: flex-start;
 }
-#main>div{
-    width: 100%;
-margin-top: 2vh;
-margin-left: 3vw;
+#mainCart img{
+    width: 80%;
 }
-#main>div img{
-    width: 70%;
+#mainCart button{
+    width: 3vw;
 }
+#mainCart button:nth-last-child(1){
+    width: 5vw;
+    margin-left: 2vw;
+}
+
 
 
 
@@ -335,9 +223,6 @@ gap: 30px;
 .btn1{
     background-color: rebeccapurple;
 }
-.showNone{
-    display: none;
-}
 #main2{
     text-align: center;
     margin-top: 5vh;
@@ -397,6 +282,9 @@ overflow: hidden;
     border: 3px solid #ef4e28;
     border-radius: 20px;
 }
+
+
+/* loginPage here */
 #signUpPage{
     width: 100%;
     height: 400vh;
@@ -412,35 +300,4 @@ overflow: hidden;
     display:none;
     position: absolute;
     z-index: 100;
-}
-
-.signUpDesign{
-    padding: 50px;
-    box-shadow: 1px 1px 60px rgb(235, 8, 8);
-}
-.signUpDesign h2{
-    text-align: center;
-    color: rgb(60, 60, 215);
-    letter-spacing: 1.5px;
-}
-.signUpDesign form input{
-    display: block;
-    width: 40%;
-    margin: auto auto 3vh auto ;
-    border: 0px;
-    border: 1px solid blue;
-    border-width: 0 0 2px 0;
-    outline: none;
-}
-.signUpDesign form label{
-    display: block;
-    width: 40%;
-    margin: auto ;
-}
-.signUpDesign form input:nth-last-child(1){
-border-width: 2px 2px 2px 2px;
-border-radius: 10px;
-}
-.signUpDesign h4,h5{
-    text-align: center;
 }

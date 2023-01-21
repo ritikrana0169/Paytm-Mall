@@ -8,6 +8,53 @@
     <link rel="stylesheet" href="/inside data/inside.css">
 </head>
 <body>
+
+
+
+
+    <div id="signUpPage">
+        <button style="position: sticky; top: 22%;left: 90%; width:3vw; height: 7vh;
+        margin-top: 20vh; border-radius: 20px;color: white; border: 1px solid red; background-color: transparent;
+        " class="closeBtn"> X </button>
+        <div class="signUpDesign" style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
+            <h2>Sign Up</h2>
+            <form id="formSingUp" action="submit">
+            <label for="email">Name</label>
+            <input type="text" name="" id="signUpName">
+            <label for="email">Email</label>
+            <input type="email" name="" id="signUpMail">
+            <label for="email">Password</label>
+            <input type="password" name="" id="signUpPass">
+            <input type="submit" value="Submit">
+        </form>
+        <h4>already have account</h4>
+        <h5 style="color: blue;" id="goToSignIn">Sign In Here</h5>
+        </div>
+    </div>
+    <div id="signIn">
+        <button style="position: sticky; top: 22%;left: 90%; width:3vw; height: 7vh;
+        margin-top: 20vh; border-radius: 20px;color: white; border: 1px solid red; background-color: transparent;
+        " class="closeBtn2"> X </button>
+        <div class="signUpDesign" style="width: 40%; height: 60vh; margin: auto;border-radius: 20px; background-color: #fff; position: sticky; top: 30%;">
+            <h2>Log In</h2>
+            <form id="formSingIn" action="submit">
+            <label for="email">Email</label>
+            <input type="email" name="" id="signInMail">
+            <label for="password">Password</label>
+            <input type="password" name="" id="signInPass">
+            <input type="submit" value="Submit">
+        </form></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
     <header id="header">
          <div id="logo"> 
              <img src="./navBar Images/logo.png" alt="error" srcset="">
@@ -36,12 +83,12 @@
                 <img src="./navBar Images/icons8-list-64.png" alt="bagIcon">
                 <p>My Orders</p>
             </div>
-            <div>
+            <div onclick="gotocart()" >
                 <img src="./navBar Images/icons8-shopping-bag-50.png" alt="bagIcon">
                 <p><span id="itemInBag">No</span> item in the bag</p>
             </div>
             <div>
-                <img src="./navBar Images/icons8-nerd-50.png" alt="bagIcon">
+                <img id="loginImg" src="./navBar Images/icons8-nerd-50.png" alt="bagIcon">
                 <p><span id="login">Login/Sign up</span></p>
             </div>
         </div>
@@ -61,7 +108,7 @@
                align-items: center; justify-content: center; border-radius: 20px;">value set</div>
 
                
-               <div><form action="submit"><input type="number" placeholder="Min" id="minValue">
+               <div><form id="formFil" action="submit"><input type="number" placeholder="Min" id="minValue">
             <input type="number" placeholder="Max" id="maxValue">
         <input type="submit" value="Show"></form></div>
         
@@ -149,4 +196,5 @@
     </footer>
 </body>
 <script src="/inside data/inside.js"></script>
+<script src="/signUp.js"></script>
 </html>

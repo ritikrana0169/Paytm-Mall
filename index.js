@@ -12,8 +12,14 @@ let login=document.getElementById("login");
 let signUpPage=document.getElementById("signUpPage");
 let closeBtn=document.querySelector(".closeBtn");
 let goto=document.getElementById("goToSignIn");
+
+
 const api="https://63c6452ddcdc478e15be0fe2.mockapi.io/e-commerce";
 let cartData=JSON.parse(localStorage.getItem("cartData"))||[];
+let userName=JSON.parse(localStorage.getItem("userName"))||[];
+if(userName.length!==0){
+    document.getElementById("login").innerHTML="<b>Welcome -</b>"+userName
+}
 fetching(api);
 async function fetching(data){
     let request=await fetch(data);
@@ -21,16 +27,30 @@ async function fetching(data){
     return display(inData,cartData),display3(inData,cartData);
 }
 login.addEventListener("click",()=>{
-    signUpPage.style.display="block"
+    if(userName==""){
+        signUpPage.style.display="block"
+    }else{
+       document.getElementById("logOutBtn").style.display="block"
+    }
 })
 goto.addEventListener("click",()=>{
     signUpPage.style.display="none"
     document.getElementById("signIn").style.display="block"
 })
+
+
+
+
+
 function display(data,data2){
     // main.innerHTML="";
-   document.getElementById("itemInBag").innerText=data2.length;
-    data.forEach((element,index) => {
+    if(userName.length==0){
+        document.getElementById("itemInBag").innerText=0;
+
+    }else{
+
+        document.getElementById("itemInBag").innerText=data2.length;
+    }    data.forEach((element,index) => {
         let div=document.createElement("div");
         
         div.setAttribute=("class","part1")
@@ -42,9 +62,9 @@ function display(data,data2){
         let name="";
         title.addEventListener("click",()=>{
             data=data.filter((ele,ind)=>{
-              if(index==ind){
-                name=element.title;
-              }
+                if(index==ind){
+                    name=element.title;
+                }
             })
             localStorage.setItem("insideName",JSON.stringify(name));
         })
@@ -85,8 +105,8 @@ function display2(data){
         title.addEventListener("click",()=>{
             data=data.filter((ele,ind)=>{
               if(index==ind){
-                name=element.title;
-              }
+                  name=element.title;
+                }
             })
             localStorage.setItem("insideName",JSON.stringify(name));
         })
@@ -104,9 +124,9 @@ document.querySelector(".part2Btn2").addEventListener("click",()=>{
 })
 function display3(data){
     
-   
-   for(let i=data.length-1;i>=0;i--){
     
+    for(let i=data.length-1;i>=0;i--){
+        
         let div=document.createElement("div");
         div.setAttribute=("class","part1")
         let image=document.createElement("img");
@@ -117,9 +137,9 @@ function display3(data){
         let name="";
         title.addEventListener("click",()=>{
             data=data.filter((ele,ind)=>{
-              if(i==ind){
-                name=data[i].title;
-              }
+                if(i==ind){
+                    name=data[i].title;
+                }
             })
             localStorage.setItem("insideName",JSON.stringify(name));
         })
@@ -142,3 +162,10 @@ closeBtn.addEventListener("click",()=>{
 document.querySelector(".closeBtn2") .addEventListener("click",()=>{
     document.getElementById("signIn").style.display="none";
 })
+function clearAll(){
+    localStorage.removeItem("userName")
+    window.location.href="index.html"
+}
+function gotocart(){
+    window.location.href="cart.html"
+}
