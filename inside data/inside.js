@@ -125,6 +125,7 @@ function display(data,data2){
             }else{
             if(checkItem(element)){
                 alert("Already In Cart")
+        
             }else{
                 cartData.push({...element,quantity:1})
                 localStorage.setItem("cartData",JSON.stringify(cartData));

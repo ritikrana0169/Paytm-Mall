@@ -77,6 +77,7 @@ data.forEach((element,index) => {
         image.style.marginLeft="30vw"
         image.src="https://www.btec.ae/wp-content/uploads/2021/10/success.gif";
         main1.append(image);
+        localStorage.removeItem("cartData");
     }else{
         alert("No item")
     }
