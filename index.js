@@ -13,7 +13,6 @@ let signUpPage=document.getElementById("signUpPage");
 let closeBtn=document.querySelector(".closeBtn");
 let goto=document.getElementById("goToSignIn");
 
-
 const api="https://63c6452ddcdc478e15be0fe2.mockapi.io/e-commerce";
 let cartData=JSON.parse(localStorage.getItem("cartData"))||[];
 let userName=JSON.parse(localStorage.getItem("userName"))||[];

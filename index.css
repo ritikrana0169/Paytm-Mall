@@ -405,7 +405,7 @@ overflow: hidden;
 #signIn{
     width: 100%;
     height: 400vh;
-    background-color: rgba(246, 255, 0, 0.445);
+    /* background-color: rgba(246, 255, 0, 0.445); */
     display:none;
     position: absolute;
     z-index: 100;
@@ -413,7 +413,7 @@ overflow: hidden;
 .signUpDesign{
     padding: 50px;
     box-shadow: -10px -10px  100px rgb(24, 3, 255);
-    border: 4px solid rgb(0, 255, 251);
+    border: 4px solid rgb(4, 187, 108);
 }
 .signUpDesign h2{
     text-align: center;
@@ -453,15 +453,12 @@ border-radius: 10px;
 .myStyle>div{
     /* text-align: center; */
     width: 80%;
-    box-shadow: 1px 1px 10px rgb(1, 1, 1);
+    /* box-shadow: 1px 1px 10px rgb(1, 1, 1); */
     border-radius: 20px;
-    background-color: black;
-    color: white;
+    /* color: white; */
 }
 .myStyle>div img{
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    /* border-radius: 20px 20px 0 0; */
 }
-.myStyle>div h3,h4{
-    margin-left: 1vw;
-}
+
