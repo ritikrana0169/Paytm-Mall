@@ -1,4 +1,6 @@
 let insideName=JSON.parse(localStorage.getItem("insideName"));
+let sorting=document.getElementById("select");
+
 console.log(insideName);
 document.getElementById("setBrand").innerText=insideName;
 document.getElementById("nameOfProduc").innerText=insideName;
@@ -27,11 +29,36 @@ if(element.name==insideName){
     return false;
 }
     });
-    display(filtering,cartData),priceB(filtering,cartData);
+    display(filtering,cartData),priceB(filtering,cartData),sortFun(filtering,cartData);
     }catch{
 console.log("err")
     }
 }
+
+
+
+
+function sortFun(data,cartData){
+    sorting.addEventListener("change",()=>{
+        if(sorting.value==""){
+            console.log("Nothing")
+        }else{
+            if(sorting.value=="low"){
+                
+                  let fil=  data.sort(
+                        (p1, p2) => 
+                        (p1.price > p2.price) ? 1 : (p1.price < p2.price) ? -1 : 0);
+                 return   display(fil,cartData) 
+                }else if(sorting.value=="high"){
+                    let fil=  data.sort(
+                        (p1, p2) => 
+                        (p1.price < p2.price) ? 1 : (p1.price > p2.price) ? -1 : 0);
+                 return   display(fil,cartData) 
+                }
+        }
+    })
+}
+
 
 function priceB(data,data2){
 formFil.addEventListener("submit",(e)=>{
@@ -81,12 +108,14 @@ function display(data,data2){
         let img=document.createElement("img");
         img.src=element.image;
         let name=document.createElement("h5");
+        name.style.textAlign="start"
         name.innerText=element.name;
         let price=document.createElement("h4");
         price.innerText="₹"+element.price;
         let discount=document.createElement("h5");
         discount.innerText="₹"+"150 Off";
         discount.style.color="red";
+        discount.style.textAlign="start"
         let addTocart=document.createElement("button");
         addTocart.innerText="Add To Cart"
         div.append(img,name,price,discount,addTocart);

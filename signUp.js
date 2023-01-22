@@ -38,7 +38,7 @@ function loginS(data)
         console.log(loginData)
         alert("SignIn Sucess");
     }else{
-        alert("Nahi hua")
+        alert("Wrong Credentials")
     }
     function checkIt(data){
         for(let i=0;i<data.length;i++){
